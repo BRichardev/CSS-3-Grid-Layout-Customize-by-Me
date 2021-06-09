@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+
+    <title>CSS Grid</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/style_animations.css">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        .parent1{
+            background-color: hsla(200, 100%, 20%);
+            height: 500px;
+            width: 500px;
+        }
+
+        .child1 {
+            background-color: red;
+            height: 45%;
+            width: 45%;
+            animation: left-to-right 1s ease-in forwards infinite alternate;
+        }
+
+        .parent1:hover .child1{
+          animation-play-state: paused;
+        }
+
+        @keyframes left-to-right {
+          0% {
+            background-color: red;
+            transform: translateX(0);
+          }
+          33% {
+            background-color: rgb(8, 189, 8);
+            transform: translateY(100%);
+          }
+          66% {
+            background-color: rgb(6, 153, 6);
+            transform: translateY(100%) translateX(100%);
+          }
+          100% {
+            background-color: rgb(4, 100, 4);
+            transform: translateX(100%);
+          }
+        }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+        <div class="header" tabindex="0">
+            <a href="index.html" tabindex="0">Home</a>
+            <a href="#" tabindex="0">Animações</a>
+            <a href="circle_square_animations.html" tabindex="0">Loading</a>
+        </div>
+        <div class="content-large" tabindex="0">
+            <div id="aligh_animation1" class="parent1">
+                <div class="child1">
+                </div>
+            </div><br />
+            <div id="square_animation"></div>
+        </div>
+         <div class="footer" tabindex="0">
+            <p>Copyright - 2021 by BRichardev</p>
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

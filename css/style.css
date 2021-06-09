@@ -1,0 +1,142 @@
+:root {
+  --black: #000000;
+  --gray: rgb(116, 112, 112);
+  --white: rgb(243, 237, 237);
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+#html_css {
+  width: 100%;
+  height: 600px;
+  border-radius: 10px;
+}
+
+#css3_animation {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+#h1_circle {
+  text-align: center;
+}
+
+#h1_square {
+  text-align: center;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-rows: 50px 1fr 1fr 100px;
+
+  /*Shortcut para o grid template row e columns grid-template: 50px 1fr 1fr 1fr 1fr 1fr 100px / repeat(3, 1fr);*/
+
+  grid-gap: 10px;
+
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.container > div {
+  padding: 10px;
+  border: 2px solid var(--black);
+  border-radius: 10px;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  
+}
+
+.header > a {
+  text-decoration: none;
+  color: inherit;
+  cursor:pointer; 
+  padding: 10px 20px 10px 20px;
+}
+
+/* link que foi visitado */
+.header  a:visited {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+/* mouse over */
+.header  a:hover {
+  background-color: var(--black);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 20px 10px 20px;
+}
+
+/* link selecionado */
+.header  a:active {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+
+.content-large {
+  grid-row-start: 2;
+  grid-row-end: span 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+
+
+.footer {
+  grid-column: 1 / span 3;
+  text-align: center;
+}
+
+.footer:nth-child(1) {
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+
+  .container{
+    grid-template-rows: 50px 1fr 1fr 1fr 100px; 
+  }
+  .content-large {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+   .content-small {
+    grid-row-start:   3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .content-small1 {
+    grid-row-start:   4;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
